@@ -1,0 +1,68 @@
+/* iCheck plugin Square skin, red
+----------------------------------- */
+.icheckbox_square-red,
+.iradio_square-red {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(red.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-red {
+    background-position: 0 0;
+}
+
+.icheckbox_square-red.hover {
+    background-position: -18px 0;
+}
+
+.icheckbox_square-red.checked {
+    background-position: -36px 0;
+}
+
+.icheckbox_square-red.disabled {
+    background-position: -54px 0;
+    cursor: default;
+}
+
+.icheckbox_square-red.checked.disabled {
+    background-position: -72px 0;
+}
+
+.iradio_square-red {
+    background-position: -90px 0;
+}
+
+.iradio_square-red.hover {
+    background-position: -108px 0;
+}
+
+.iradio_square-red.checked {
+    background-position: -126px 0;
+}
+
+.iradio_square-red.disabled {
+    background-position: -144px 0;
+    cursor: default;
+}
+
+.iradio_square-red.checked.disabled {
+    background-position: -162px 0;
+}
+
+/* HiDPI support */
+/* TODO Retina屏的先暂时去掉 */
+/*@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {*/
+    /*.icheckbox_square-red,*/
+    /*.iradio_square-red {*/
+        /*background-image: url(red@2x.png);*/
+        /*-webkit-background-size: 240px 24px;*/
+        /*background-size: 240px 24px;*/
+    /*}*/
+/*}*/

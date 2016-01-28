@@ -1,0 +1,63 @@
+<ul class="pagination">
+    <% if (!simple) { %>
+    <% if (current == 1) { %>
+    <li class="ow-prev disabled"><a href="javascript:void(0)">&lt;</a></li>
+    <% }else{ %>
+    <li class="ow-prev" p="<%= (current - 1) %>"><a href="javascript:void(0)">&lt;</a></li>
+    <% } %>
+    <% } %>
+</ul>
+<ul class="pagination">
+    <% if (!simple) { %>
+    <% if (current == pages) { %>
+    <li class="ow-next disabled"><a href="javascript:void(0)">&gt;</a></li>
+    <% }else{ %>
+    <li class="ow-next" p="<%= (current + 1) %>"><a href="javascript:void(0)">&gt;</a></li>
+    <% } %>
+    <% } %>
+</ul>
+<ul class="pagination">
+    <% if(pages == 1) { %>
+
+    <li class="active"><span>1</span></li>
+
+    <% } else if (pages <= 5) { %>
+
+    <% for (var i = 1; i <= pages; i++) { %>
+    <% if(i == current) { %>
+    <li class="active"><span><%= i %></span></li>
+    <% } else { %>
+    <li p="<%= i %>"><a href="javascript:void(0)"><%= i %></a></li>
+    <% } %>
+    <% } %>
+
+    <% } else { %>
+
+    <% if (current <= 5) { %>
+    <% for(var i = 1; i < current; i++){ %>
+    <li p="<%= i %>"><a href="javascript:void(0)"><%= i %></a></li>
+    <% } %>
+    <% } else { %>
+    <li p="1"><a href="javascript:void(0)">1</a></li>
+    <li class="ow-ellipsis"><span>...</span></li>
+    <% for(var i = current - 3; i < current; i++){ %>
+    <li p="<%= i %>"><a href="javascript:void(0)"><%= i %></a></li>
+    <% } %>
+    <% } %>
+
+    <li class="active"><span><%= current %></span></li>
+
+    <% if(current > pages - 5){ %>
+    <% for(var i = current + 1;i <= pages;i++){ %>
+    <li p="<%= i %>"><a href="javascript:void(0)"><%= i %></a></li>
+    <% } %>
+    <% } else { %>
+    <% for(var i = current + 1; i <= current + 3; i++){ %>
+    <li p="<%= i %>"><a href="javascript:void(0)"><%= i %></a></li>
+    <% } %>
+    <li class="ow-ellipsis"><span>...</span></li>
+    <li p="<%= pages %>"><a href="javascript:void(0)"><%= pages %></a></li>
+    <% } %>
+
+    <% } %>
+</ul>

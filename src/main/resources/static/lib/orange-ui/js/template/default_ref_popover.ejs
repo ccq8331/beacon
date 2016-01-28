@@ -1,0 +1,9 @@
+<div style='height: <%= height %>px; width:<%= width %>px'>
+    <div style='overflow: auto; height: <% if(quick_select){ %> <%= height %> <% }else{ %> <%= (height - 37) %><% } %>px; width:<%= width %>px;'>
+        <div id='<%= id %>'></div>
+    </div>
+    <div class='text-right ow-h-sep' <% if(quick_select){ %>style='display:none'<% } %>>
+        <button id="<%= id %>-ok" class="btn btn-primary btn-xs" data-loading-text="载入中..."><span class="glyphicon glyphicon-ok"></span> 确定</button>
+        <button id="<%= id %>-cancel" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span> 关闭</button>
+    </div>
+</div>
